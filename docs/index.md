@@ -11,7 +11,7 @@ The project is based on the contribution of many great and open-minded people by
 
 Use the navigation bar on this site or the following links to get your scanner up and running:
 
-- [Soldering](hardware/PCB)
+- [Soldering](hardware/PCBs)
 - [Building the OpenScan Classic](hardware/OpenScanClassic)
 - [Building the OpenScan Mini](hardware/OpenScanMini) 
 - [Firmware - Setup](firmware/setup)
@@ -22,7 +22,7 @@ Use the navigation bar on this site or the following links to get your scanner u
 
 If you like the project and want to help to make it even better, please consider supporting it in any of the following ways:
 
-- **report a bug** or create a **feature request** - this can be a minor typo in the firmware or a major revision. Don't be afraid, if you have no programming background, [this guide](guideline/report_bug/) has you covered.
+- **report a bug** or create a **feature request** - this can be a minor typo in the firmware or a major revision. Don't be afraid, if you have no programming background: [This guide](guideline/report_bug/) contains all the information you need.
 - **share the project** and scanning results with the world - the more people join, the faster the project will improve
 - improve the **design or electronics** 
 - help with the **documentation**

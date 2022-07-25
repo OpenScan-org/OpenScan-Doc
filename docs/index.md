@@ -20,9 +20,9 @@ Use the navigation bar on this site or the following links to get your scanner u
 
 ## Bugs & Feature requests 
 
-If you like the project and want to help to make it even better, please consider supporting it in any of the following ways:
+If you like the project and want to help to make it even better, please consider supporting in any of the following ways:
 
-- **report a bug** or create a **feature request** - this can be a minor typo in the firmware or a major revision. Don't be afraid, if you have no programming background: [This guide](guideline/report_bug/) contains all the information you need.
+- **report a bug** or create a **feature request** - this can be a minor typo in the firmware, a missing piece in the documentation or a major design revision. Don't be afraid, if you have no programming background: [This guide](guideline/report_bug/) contains all the information you need.
 - **share the project** and scanning results with the world - the more people join, the faster the project will improve
 - improve the **design or electronics** 
 - help with the **documentation**

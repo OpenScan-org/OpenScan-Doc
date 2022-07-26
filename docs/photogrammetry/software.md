@@ -1,4 +1,4 @@
-# TODO a summary of various options for photogrammetry processing solutions
+# Photogrammetry Software
 
 ## Desktop Software
 
@@ -16,7 +16,7 @@
 
 | App | Description & Remarks | Links |
 | - | - |- |
-|AliceVision Meshroom||[alicevision.org](https://alicevision.org/#meshroom)|
+|AliceVision Meshroom|(+) intuitive user interface<br>(+) is being actively developed<br>(-) low reconstruction speed<br>(+) One-Click-Reconstruktion<br>(+) Output: pointcloud, mesh, texture<br>(-) GPU with CUDA required (Nvidia)<br>(-) sub-optimal default settings|[alicevision.org](https://alicevision.org/#meshroom)|
 |VisualSFM|(+) very fast reconstruction <br> (+) simple user interface<br> (-) sometimes hard to set up<br>(-) Output: pointcloud only (need additional software for meshing, e.g. CloudCompare or Meshlab)<br> (-) only for private users|[CCWU.me](http://ccwu.me/vsfm/)|
 |OpenDroneMap||[opendronemap.org](https://www.opendronemap.org/)|
 |OpenMVG||[openMVG@github](https://github.com/openMVG/openMVG)|

@@ -50,6 +50,7 @@ nav:
   - Photogrammetry:
     - Basics: "photogrammetry/basics.md"
     - Software: "photogrammetry/software.md"
+    - Quality: "photogrammetry/quality.md"
   - Guideline:
     - Bug&Feature: "guideline/report_bug.md"
   - Changelog: "changelog.md"

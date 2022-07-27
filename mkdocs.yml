@@ -51,9 +51,10 @@ nav:
     - Basics: "photogrammetry/basics.md"
     - Software: "photogrammetry/software.md"
     - Quality: "photogrammetry/quality.md"
-  - Showroom:
-    - Scanner: "showroom/scanner.md"
-    - 3D Scans: "showroom/scan.md"
+  - Showcase:
+    - Scanner: "showcase/scanner.md"
+    - 3D Scans: "showcase/scan.md"
   - Guideline:
     - Bug&Feature: "guideline/report_bug.md"
+  - Downloads: "downloads.md"
   - Changelog: "changelog.md"

@@ -167,7 +167,7 @@ Look on the sides and check that there is no gap and the PCB is not visible anym
 Pull some length of cable upwards to give yourself some slack. Connect the cable to the camera module as pictured. The metal contacts need to face towards the camera's PCB:
 ![10connect-cable](https://user-images.githubusercontent.com/20565623/218058513-75b959da-f2e7-40d3-af35-e84944c5d235.jpg)
 
-Pull the cable down again, so as little length of cable remains inside, but make sure the cable is not under tension. Place the lid onto the mount and push it in:
+Pull the cable down again, so as little length of cable as possible remains inside, but make sure the cable is not under tension. Place the lid onto the mount and push it in:
 ![11close-lid](https://user-images.githubusercontent.com/20565623/218058849-46ec453b-368b-41af-8369-e1afd7a21eec.jpg)
 
 Don't forget to connect the pink ringlight cable:

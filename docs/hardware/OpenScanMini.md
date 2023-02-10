@@ -150,7 +150,8 @@ Place two of the M3×12 screws as pictured:
 ![04place-screws](https://user-images.githubusercontent.com/20565623/218056474-aa86811f-3cd9-401f-9c4b-9bda1f7894be.jpg)
 
 Slide the ringlight module onto the screws and press it into its recess in the mount:
-![05place-ringlight](https://user-images.githubusercontent.com/20565623/218056797-61bc1321-c276-4ac4-aa4b-f9d9bb7515f2.jpg)
+![05place-ringlight](https://user-images.githubusercontent.com/20565623/218089255-274204e4-2366-4914-86b8-897390c78af4.jpg)
+
 
 **Check that the lens is centered so it doesn't touch the edge of the ringlight PCB. Otherwise it might get damaged during focussing!** If necessary adjust its position in the rails.
 

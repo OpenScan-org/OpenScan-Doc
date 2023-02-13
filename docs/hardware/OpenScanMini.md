@@ -131,9 +131,52 @@ Insert the camera ribbon cable into the socket. The metal plating should be faci
 
 ### Preparing the Ringlight Module
 
+## Variant: Arducam IMX519 16mp with the slide-in mount
+* 1× Ringlight PCB
+* 1× Arducam IMX519 16mp camera module
+* Openscan slide-in mount
+* lid for the Openscan slide-in mount
+* 4× M3×12 screws
+
+Start by sliding the camera module into the mount as pictured below until it snaps in place. **Take care that the small black camera cable slides cleanly into the recess (left side in the image).**
+
+![01insert](https://user-images.githubusercontent.com/20565623/218055061-ce4bbe95-fad9-4d83-b638-9f8e1b1e828e.jpg)
+![02slide](https://user-images.githubusercontent.com/20565623/218055945-b0ad8791-660c-4991-a50c-367d68f87adb.jpg)
+
+Flip the mount and check that the lens sits as pictured:
+![03check](https://user-images.githubusercontent.com/20565623/218056417-6cee16e4-5469-4bf5-8693-55f925c419dd.jpg)
+
+Place two of the M3×12 screws as pictured:
+![04place-screws](https://user-images.githubusercontent.com/20565623/218056474-aa86811f-3cd9-401f-9c4b-9bda1f7894be.jpg)
+
+Slide the ringlight module onto the screws and press it into its recess in the mount:
+![05place-ringlight](https://user-images.githubusercontent.com/20565623/218089255-274204e4-2366-4914-86b8-897390c78af4.jpg)
+
+
+**Check that the lens is centered so it doesn't touch the edge of the ringlight PCB. Otherwise it might get damaged during focussing!** If necessary adjust its position in the rails.
+
+Insert the camera ribbon cable through the aperture in the mount:
+![07place-mount](https://user-images.githubusercontent.com/20565623/218057916-94762255-4db1-463e-858e-12f32759b8ac.jpg)
+
+Place the remaining two M3×12 screws and tighten them until the mount sits snugly on the rotor arm:
+![08tighten-screws](https://user-images.githubusercontent.com/20565623/218058112-4bc832c4-ead1-4787-a136-8da577ed9096.jpg)
+
+Look on the sides and check that there is no gap and the PCB is not visible anymore:
+![09check-tightness](https://user-images.githubusercontent.com/20565623/218058489-a66b0fe2-8580-487a-8ca6-c6901bc49cd9.jpg)
+
+
+Pull some length of cable upwards to give yourself some slack. Connect the cable to the camera module as pictured. The metal contacts need to face towards the camera's PCB:
+![10connect-cable](https://user-images.githubusercontent.com/20565623/218058513-75b959da-f2e7-40d3-af35-e84944c5d235.jpg)
+
+Pull the cable down again, so as little length of cable as possible remains inside, but make sure the cable is not under tension. Place the lid onto the mount and push it in:
+![11close-lid](https://user-images.githubusercontent.com/20565623/218058849-46ec453b-368b-41af-8369-e1afd7a21eec.jpg)
+
+Don't forget to connect the pink ringlight cable:
+![12connect-ringlight-cable](https://user-images.githubusercontent.com/20565623/218060092-e03d6a9c-150b-47f5-944f-3ffd0b9cb8b2.jpg)
+
 ** IMPORTANT: Make sure to follow the right setup for your camera module:
 
-#### Arducam IMX519 16mp with Autofocus
+#### Variant: Arducam IMX519 16mp with Autofocus and plastic screws
 * 1x Ringlight PCB
 * 1x Arducam IMX519 16mp camera module 
 * 2x M2x6 screws

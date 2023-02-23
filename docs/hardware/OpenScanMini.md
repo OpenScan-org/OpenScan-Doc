@@ -131,7 +131,59 @@ Insert the camera ribbon cable into the socket. The metal plating should be faci
 
 ### Preparing the Ringlight Module
 
-## Variant: Arducam IMX519 16mp with the slide-in mount
+** There are three different variants for mounting the ringlight module: mounting the Arducam or Pi Camera on the ringlight and mounting the ringlight directly onto the rotor arm, or assembling the ringlight and Arducam with the help of the slide-in mount (available soon). Please scroll to the correct section for your hardware. **
+
+
+** IMPORTANT: Make sure to follow the right setup for your camera module:
+
+#### Ringlight Variant: Arducam IMX519 16mp with Autofocus and plastic screws
+* 1x Ringlight PCB
+* 1x Arducam IMX519 16mp camera module 
+* 2x M2x6 screws
+* 2x M2x6 standoffs
+* 2x M2 nuts
+
+See the sequence of the parts: 
+
+![image](https://user-images.githubusercontent.com/57842400/174085376-bd4337ea-9719-4759-b4ed-e29f14d615cb.png)
+
+**Make sure that the lens is properly centered (looking at the ringlight from the front as shown in the right image):**
+
+![arducam](https://user-images.githubusercontent.com/57842400/174086556-5910f154-6780-4acd-94b1-73ce9ca5a6db.jpg)
+
+
+#### Ringlight Variant: Pi Camera v2.1 or v1.3
+
+* 1x Ringlight PCB
+* Pi Camera v2.1 or v1.3 module 
+* 2x M2x12 screws
+* 2x spacer
+* 2x M2 nuts
+
+See the sequence of the parts: 
+
+![image](https://user-images.githubusercontent.com/57842400/174087838-dd806e6d-5823-4748-9241-7bf04aed1ba9.png)
+
+![picamera](https://user-images.githubusercontent.com/57842400/174087769-922aa8e4-7e88-4b05-b342-0912f542a6b9.jpg)
+
+### Mounting and connecting the Ringlight Module 
+* 1x Ringlight Module
+* 1x 50cm ringlight power cable (3P JST XH)
+* 4x M3x8 screws
+
+Mount the ringlight module using 4 M3x8mm bolts as indicated by the red arrows:
+![image](https://user-images.githubusercontent.com/57842400/174088696-c2679271-221a-4d9e-8668-62ab5f7b548f.png)
+
+Connect the camera ribbon cable with the camera. The Metal plating is facing down. (yellow circle)
+Connect the 50cm ringlight cable with 3P JST connectors to the Ringlight (red arrow):
+
+![image](https://user-images.githubusercontent.com/57842400/174090062-214e2906-c021-4d3a-a00e-800714ea3225.png)
+
+Guide the ringlight cable as indicated by the yellow circles:
+
+![image](https://user-images.githubusercontent.com/57842400/174090027-2d1beaf6-c534-471c-bbe4-a1a458adef7a.png)
+
+#### Ringlight Variant: Arducam IMX519 16mp with the slide-in mount
 * 1× Ringlight PCB
 * 1× Arducam IMX519 16mp camera module
 * Openscan slide-in mount
@@ -174,50 +226,6 @@ Pull the cable down again, so as little length of cable as possible remains insi
 Don't forget to connect the pink ringlight cable:
 ![12connect-ringlight-cable](https://user-images.githubusercontent.com/20565623/218060092-e03d6a9c-150b-47f5-944f-3ffd0b9cb8b2.jpg)
 
-** IMPORTANT: Make sure to follow the right setup for your camera module:
-
-#### Variant: Arducam IMX519 16mp with Autofocus and plastic screws
-* 1x Ringlight PCB
-* 1x Arducam IMX519 16mp camera module 
-* 2x M2x6 screws
-* 2x M2x6 standoffs
-* 2x M2 nuts
-
-See the sequence of the parts: 
-
-![image](https://user-images.githubusercontent.com/57842400/174085376-bd4337ea-9719-4759-b4ed-e29f14d615cb.png)
-
-**Make sure that the lens is properly centered (looking at the ringlight from the front as shown in the right image):**
-
-![arducam](https://user-images.githubusercontent.com/57842400/174086556-5910f154-6780-4acd-94b1-73ce9ca5a6db.jpg)
-
-
-#### Pi Camera v2.1 or v1.3
-
-* 1x Ringlight PCB
-* Pi Camera v2.1 or v1.3 module 
-* 2x M2x12 screws
-* 2x spacer
-* 2x M2 nuts
-
-See the sequence of the parts: 
-
-![image](https://user-images.githubusercontent.com/57842400/174087838-dd806e6d-5823-4748-9241-7bf04aed1ba9.png)
-
-![picamera](https://user-images.githubusercontent.com/57842400/174087769-922aa8e4-7e88-4b05-b342-0912f542a6b9.jpg)
-
-### Mounting and connecting the Ringlight Module 
-* 1x Ringlight Module
-* 1x 50cm ringlight power cable (3P JST XH)
-* 4x M3x8 screws
-
-Mount the ringlight module using 4 M3x8mm bolts as indicated by the red arrows:
-![image](https://user-images.githubusercontent.com/57842400/174088696-c2679271-221a-4d9e-8668-62ab5f7b548f.png)
-
-Connect the camera ribbon cable with the camera. The Metal plating is facing down. (yellow circle)
-Connect the 50cm ringlight cable with 3P JST connectors to the Ringlight (red arrow):
-
-![image](https://user-images.githubusercontent.com/57842400/174090062-214e2906-c021-4d3a-a00e-800714ea3225.png)
 
 Guide the ringlight cable as indicated by the yellow circles:
 

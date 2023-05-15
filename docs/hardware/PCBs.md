@@ -2,7 +2,7 @@
 
 ## Pi Shield
 
-The OpenScan Pi Shield can be used to control two independent stepper motors and a variety of different cameras (Pi Camera, various Arducams, DSLR - via GPhoto and external Cameras like Smartphone and others). The mechanism can be used in various forms (see for example OpenScan Mini + Classic and it could be easily adapted to be used as a camera slider or in other mechanisms.
+The OpenScan Pi Shield can be used to control two independent stepper motors and a variety of different cameras (Pi Camera, various Arducams, DSLR - via GPhoto and external Cameras like Smartphone and others). The mechanism can be used in various forms (see for example OpenScan Mini + Classic) and it could be easily adapted to be used as a camera slider or in other mechanisms.
 
 ![image](https://user-images.githubusercontent.com/57842400/181233777-a679768e-08b9-406b-9027-11ad7a09ff09.png)
 
@@ -37,7 +37,7 @@ The OpenScan Pi Shield can be used to control two independent stepper motors and
 
 * solder the pin header (4) to the pi shield pcb
 * check the back of the voltage regulator (8). The 5V solder pads (A) must be bridged. The connection at point (B) must be disconnected by scratching. This should set the converter to 5V
-* Alternatively you can adjust the potentiometer on the front to set the correct output voltage of 5V. 
+* Alternatively you can adjust the potentiometer on the front to set the correct output voltage of 5V.
 
 ![image](https://user-images.githubusercontent.com/57842400/181231953-b7b89bba-bd65-4ae1-abc2-d71b3b937a57.png)
 
@@ -101,5 +101,3 @@ Make sure that all LEDs are aligned correctly as shown in the following close-up
 You can test the circuit's functionality by applying 12V directly to the Ringlight PCB as shown in the following images:
 
 ![image](https://user-images.githubusercontent.com/57842400/181256232-6a5cbe1f-4d3c-4e08-982f-6841a3be668f.png)
-
-   

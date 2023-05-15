@@ -2,11 +2,11 @@
 
 ## Overview
 
-It is necessary to use a **Raspberry Pi with at least 1GB of RAM** to run the firmware. So far, the firmware has been tested on Raspberry Pi 3B+ and 4B variants. (but it might work on other versions) 
+It is necessary to use a **Raspberry Pi with at least 1GB of RAM** to run the firmware. So far, the firmware has been tested on Raspberry Pi 3B+ and 4B variants, but it might work on other versions.
 
-The easiest way is to download the latest Raspbian image and flash your micro sd card as described [here](#flashing-the-sd-card-using-the-raspberry-pi-imager). 
+The easiest way is to download the latest Raspbian image and flash your micro SD card as described [here](#flashing-the-sd-card-using-the-raspberry-pi-imager).
 
-Alternatively you can set-up the firmware manually by following [this guide](#manually-installing-and-setting-up-your-raspberry-pi) .
+Alternatively you can set up the firmware manually by following [this guide](#manually-installing-and-setting-up-your-raspberry-pi).
 
 ## Flashing the SD Card using the Raspberry Pi Imager
 
@@ -15,9 +15,11 @@ I have pre-compiled a working Raspbian Image (2022-07-08), that can be downloade
 Download and flash the Raspbian Image to your Micro SD Card using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
 ## Manually installing and setting up your Raspberry Pi
-The firmware and following installation guide is optimized for **Raspbian Bullseye with Desktop** environment, but can also be used headless (Note, that the desktop version comes with some libraries that you will otherwise need to install manually). 
+
+The firmware and following installation guide is optimized for **Raspbian Bullseye with Desktop** environment, but can also be used headless (Note, that the desktop version comes with some libraries that you will otherwise need to install manually).
 
 ### Raspi-config
+
 ```sudo raspi-config```
 
 ```--> performance options --> GPU --> change to 256```
@@ -49,6 +51,7 @@ wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 ### Samba (optional but highly recommended)
+
 Create a shared network drive, so that you can easily access the Raspberry Pi's filesystem. It enables you to upload custom datasets to the OpenScanCloud through the browser interface. Simply copy a zip file containing your photos to the *../OpenScan/scans* directory.
 
 Install the package
@@ -135,12 +138,12 @@ Initialize node-red:
 ```sudo node-red admin init```
 
 * settings file: ```/root/.node-red/settings.js```
-* Security: ```No``` 
-* Project: ```No``` 
-* Flows File Settings: ```Enter``` 
-* Passphrase: ```Enter``` 
-* Theme: ```default``` 
-* Text editor: ```default``` 
+* Security: ```No```
+* Project: ```No```
+* Flows File Settings: ```Enter```
+* Passphrase: ```Enter```
+* Theme: ```default```
+* Text editor: ```default```
 * External Modules: ```Yes```
 
 Open node-red settings file:
@@ -185,6 +188,7 @@ And run the following command to install some additional palettes to node-red
 ```node-red-restart```
 
 ### Libcamera - to run Arducam IMX519 (and other non-Raspberry-Pi camera moduls)
+
 See [Arducam.com](https://www.arducam.com/docs/cameras-for-raspberry-pi/raspberry-pi-libcamera-guide/#how-to-install-libcamera-d9f38d46-8576-43e2-9375-e225c272095f) for more details
 
 Download all necessary files
@@ -231,6 +235,7 @@ create and open the service file:
 ```sudo nano /lib/systemd/system/flask.service```
 
 with the following content:
+
 ```
 [Unit]
 Description=photo service

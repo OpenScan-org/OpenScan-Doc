@@ -1,8 +1,11 @@
-# How to create a perfect 3d scan
+# How to create a perfect 3D scan
 
 ## TLDR
+
 A perfect object's surface for photogrammetry looks something like this:
+
 ![perfect surface](https://user-images.githubusercontent.com/57842400/165493134-2781e6df-6e9e-44ec-8a93-12215ea65d59.jpg)
+
 * **thousands of distinct/random features**
 * no specular highlights
 * no blurry areas
@@ -22,6 +25,7 @@ Below you can find many examples and explanations.
 ![DecisionTree](https://user-images.githubusercontent.com/57842400/165475087-9fd507b6-ea02-454a-af5a-b6895f08c3b5.png)
 
 # Table of Contents
+
 1. [OBJECT](#OBJECT)
    * [Plastic Miniature](#plastic-miniature)
    * [Plastic replacment part](#plastic-replacement-part)
@@ -30,16 +34,17 @@ Below you can find many examples and explanations.
    * [Cast Metal Tank Chain](#cast-metal-tank-chain)
    * [Stone spinning whorl (archeology)](#stone-spinning-whorl)
    * [Flintstone tool/weapon](#Stone-flintstone-tool)
-   * 
 2. [LIGHT](#LIGHT)
    * [Cross polarization](#Cross_polarization)
 3. [CAMERA](#CAMERA)
 
 # OBJECT
-I am using either the OpenScan Classic or Mini with their ring-light turned on to create the following examples:
+
+I am using either the OpenScan Classic or Mini with the ring light turned on to create the following examples:
 
 ## Plastic miniature
-| ![figurine1](https://user-images.githubusercontent.com/57842400/165480743-6c4cbcc1-ea7c-4b77-905d-926e91fcbd3e.jpg) | ![figurine2](https://user-images.githubusercontent.com/57842400/165480757-85ac6978-9170-4d95-94f7-fcb3bb87de01.jpg) | ![figurine3](https://user-images.githubusercontent.com/57842400/165480771-ef97c268-86bf-4f8f-8041-32474a56b134.jpg) |  
+
+| ![figurine1](https://user-images.githubusercontent.com/57842400/165480743-6c4cbcc1-ea7c-4b77-905d-926e91fcbd3e.jpg) | ![figurine2](https://user-images.githubusercontent.com/57842400/165480757-85ac6978-9170-4d95-94f7-fcb3bb87de01.jpg) | ![figurine3](https://user-images.githubusercontent.com/57842400/165480771-ef97c268-86bf-4f8f-8041-32474a56b134.jpg) |
 |:---:|:---:|:---:|
 | **bad** | **bad** | **very good** |
 | without polarizer | with polarizer | with polarizer and scanning spray |
@@ -73,7 +78,7 @@ I am using either the OpenScan Classic or Mini with their ring-light turned on t
 
 | ![cast01](https://user-images.githubusercontent.com/57842400/165490031-8954c361-4fdf-46e2-ae74-2a76ff65c689.jpg)  |  ![cast02](https://user-images.githubusercontent.com/57842400/165490049-3cf85624-2950-4dc5-bb18-436df9f29026.jpg) |
 |:---:|:---:|
-| **bad** | **very good** | 
+| **bad** | **very good** |
 | without polarizer | with polarizer  |
 |   |   |
 
@@ -110,7 +115,6 @@ This is basically as good as it could be, lots of features and almost no specula
 
 # LIGHT
 
-### Cross_polarization
-
+### Cross-polarization
 
 # CAMERA

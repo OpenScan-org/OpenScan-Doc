@@ -2,11 +2,12 @@
 
 ![OS_mini](https://user-images.githubusercontent.com/57842400/174252972-7d1f8ca2-e316-400d-b8b6-607e3f5f5140.jpg)
 
-
 ## Overview
-The OpenScan Mini is a compact desktop 3D scanner capable of scanning objects up to ~8-10 cm with an accuracy of up to 0.02 mm. The frame can be fully 3d printed, and all other components are off-the-shelf parts. You should be able to source all parts locally, or chose to support the OpenScan project by ordering (some) parts through [Openscan.eu/shop](https://www.openscan.eu/shop). Currently, the following cameras can be used without any additional modifications: Arducam IMX519 16mp & autofocus, Pi Camera v2 8mp and Pi Camera v1.3 5mp, where the Arducam IMX519 has to be considered the gold standard (for now :)
+
+The OpenScan Mini is a compact desktop 3D scanner capable of scanning objects up to ~8-10 cm with an accuracy of up to 0.02 mm. The frame can be fully 3d printed, and all other components are off-the-shelf parts. You should be able to source all parts locally, or chose to support the OpenScan project by ordering (some) parts through [OpenScan.eu/shop](https://www.openscan.eu/shop). Currently, the following cameras can be used without any additional modifications: Arducam IMX519 16MP & autofocus, Pi Camera v2 8MP and Pi Camera v1.3 5MP, where the Arducam IMX519 has to be considered the gold standard (for now :)
 
 ## Bill of material (BOM)
+
 * 24x M3x8 screws
 * 1x M3x12 screw
 * 1x [Pi Shield](https://en.openscan.eu/product-page/raspberry-pi-shield)
@@ -24,6 +25,7 @@ The OpenScan Mini is a compact desktop 3D scanner capable of scanning objects up
 * 1x Polarizer module
 
 3d printed parts:
+
 * Frontplate
 * Base
 * Rotor
@@ -32,22 +34,26 @@ The OpenScan Mini is a compact desktop 3D scanner capable of scanning objects up
 * object holders (4 sizes)
 
 ## 3D Printing
+
 Get the printable .stl (and design) files [here](https://github.com/OpenScanEu/OpenScan-Design/tree/main/OpenScanMini).
 
 **PRINTER**
-- you will need a print-bed of at least 200x200mm
+
+- you will need a print bed of at least 200x200mm
 - depending on your printer's capabilities (and your risk aversion), all parts can be fitted onto one build plate of min. 220x210mm
 - printing all parts can be done in under 17h (tested on Prusa MK3S+ using default Draft profile)
 
 **PRINT SETTINGS**
-- support: no (* except for 07_polarizer_b
+
+- support: only for 07_polarizer_b
 - layer-height: 0.2-0.3 mm
 - print speed: depends on your printer's calibration
 
 **MATERIAL**
+
 - COLOR - main Frame: Please use a material without visible particles or structure. Avoid transparent materials
 - COLOR - 07_polarizer_a: translucent/natural
-- COLOR - 07_polarizer_b: any non-translucent material (like PETG black, Prusament Galaxy Black) 
+- COLOR - 07_polarizer_b: any non-translucent material (like PETG black, Prusament Galaxy Black)
 - PLA is totally fine, since there is not a lot of mechanical strength needed
 - PETG, ABS, ASA can be used for increased temperature resistance in warm environments
 
@@ -108,7 +114,7 @@ Mount the stepper motor with four M3x8 screws like shown below. Move the large r
 
 Insert the Micro SD card into the slot of the Raspberry Pi.
 
-Mount the Raspberry Pi with four M3x8 screws. Make sure not to overtighten the screws, which might bend and damage the board. Note, that the Raspberry Pis screw holes are a tight fit for those M3 screws.
+Mount the Raspberry Pi with four M3x8 screws. Make sure not to overtighten the screws, which might bend and damage the board. Note, that the Raspberry Pi's screw holes are a tight fit for those M3 screws.
 
 ![image](https://user-images.githubusercontent.com/57842400/174013798-e6b72852-53f9-493a-96d3-4bc26c1b1188.png)
 
@@ -117,7 +123,7 @@ Mount the Raspberry Pi with four M3x8 screws. Make sure not to overtighten the s
 * 1x camera ribbon cable (50cm)
 
 Insert the camera ribbon cable through the two slots (red arrows). Make sure that the metal plating of the cable is facing the stepper motor (yellow circle).
-**Take care not to create sharp bends as this might damage the cable.:**
+**Take care not to create sharp bends as this might damage the cable.**
 
 ![image](https://user-images.githubusercontent.com/57842400/174072692-455368ca-7a0b-497c-8972-670d874e2e8e.png)
 
@@ -125,7 +131,7 @@ Continue through the next slot (again the metal plating should be facing away fr
 
 ![image](https://user-images.githubusercontent.com/57842400/174072990-5dd92e10-4e8b-439f-b5c1-4b65b0573030.png)
 
-Insert the camera ribbon cable into the socket. The metal plating should be facing away from the USB/Ethernet ports (yellow circle). Gently close the sockets bracke by pushing it down (dark part that likes to break).
+Insert the camera ribbon cable into the socket. The metal plating should be facing away from the USB/Ethernet ports (yellow circle). Gently push down on the socket clamp to close it (dark part that likes to break).
 
 ![image](https://user-images.githubusercontent.com/57842400/174073304-8fe99998-6cd1-4678-bc74-b34034983e60.png)
 
@@ -134,16 +140,17 @@ Insert the camera ribbon cable into the socket. The metal plating should be faci
 ** There are three different variants for mounting the ringlight module: mounting the Arducam or Pi Camera on the ringlight and mounting the ringlight directly onto the rotor arm, or assembling the ringlight and Arducam with the help of the slide-in mount (available soon). Please scroll to the correct section for your hardware. **
 
 
-** IMPORTANT: Make sure to follow the right setup for your camera module:
+** IMPORTANT: Make sure to follow the right setup for your camera module: **
 
 #### Ringlight Variant: Arducam IMX519 16mp with Autofocus and plastic screws
+
 * 1x Ringlight PCB
-* 1x Arducam IMX519 16mp camera module 
+* 1x Arducam IMX519 16mp camera module
 * 2x M2x6 screws
 * 2x M2x6 standoffs
 * 2x M2 nuts
 
-See the sequence of the parts: 
+See the sequence of the parts:
 
 ![image](https://user-images.githubusercontent.com/57842400/174085376-bd4337ea-9719-4759-b4ed-e29f14d615cb.png)
 
@@ -155,18 +162,18 @@ See the sequence of the parts:
 #### Ringlight Variant: Pi Camera v2.1 or v1.3
 
 * 1x Ringlight PCB
-* Pi Camera v2.1 or v1.3 module 
+* Pi Camera v2.1 or v1.3 module
 * 2x M2x12 screws
 * 2x spacer
 * 2x M2 nuts
 
-See the sequence of the parts: 
+See the sequence of the parts:
 
 ![image](https://user-images.githubusercontent.com/57842400/174087838-dd806e6d-5823-4748-9241-7bf04aed1ba9.png)
 
 ![picamera](https://user-images.githubusercontent.com/57842400/174087769-922aa8e4-7e88-4b05-b342-0912f542a6b9.jpg)
 
-### Mounting and connecting the Ringlight Module 
+### Mounting and connecting the Ringlight Module
 * 1x Ringlight Module
 * 1x 50cm ringlight power cable (3P JST XH)
 * 4x M3x8 screws
@@ -174,7 +181,7 @@ See the sequence of the parts:
 Mount the ringlight module using 4 M3x8mm bolts as indicated by the red arrows:
 ![image](https://user-images.githubusercontent.com/57842400/174088696-c2679271-221a-4d9e-8668-62ab5f7b548f.png)
 
-Connect the camera ribbon cable with the camera. The Metal plating is facing down. (yellow circle)
+Connect the camera ribbon cable with the camera. The Metal plating is facing down (yellow circle).
 Connect the 50cm ringlight cable with 3P JST connectors to the Ringlight (red arrow):
 
 ![image](https://user-images.githubusercontent.com/57842400/174090062-214e2906-c021-4d3a-a00e-800714ea3225.png)
@@ -185,9 +192,9 @@ Guide the ringlight cable as indicated by the yellow circles:
 
 #### Ringlight Variant: Arducam IMX519 16mp with the slide-in mount
 * 1× Ringlight PCB
-* 1× Arducam IMX519 16mp camera module
-* Openscan slide-in mount
-* lid for the Openscan slide-in mount
+* 1× Arducam IMX519 16MP camera module
+* OpenScan slide-in mount
+* lid for the OpenScan slide-in mount
 * 4× M3×12 screws
 
 Start by sliding the camera module into the mount as pictured below until it snaps in place. **Take care that the small black camera cable slides cleanly into the recess (left side in the image).**
@@ -248,11 +255,11 @@ Connect the stepper motor cables to the Pi Shield and the corresponding stepper 
 * 1x frontplate with Pi Shield
 * 1x base/rotor
 
-Mount the frontplate to the base. **Make sure that the pin headers of the Raspberry Pi and the Pi shield are properly aligned. (Yellow circle):**
+Mount the frontplate to the base. **Make sure that the pin headers of the Raspberry Pi and the Pi shield are properly aligned (yellow circle):**
 
 ![image](https://user-images.githubusercontent.com/57842400/174091581-3bbc2ec2-97e7-4629-83f1-7ec37a521db4.png)
 
-Use the M3 screw to connect the frontplate to the base_
+Use the M3 screw to connect the frontplate to the base:
 
 ![image](https://user-images.githubusercontent.com/57842400/174091474-c69e5b4e-965c-44b3-a53d-5347741ceaaa.png)
 
@@ -261,7 +268,7 @@ Use the M3 screw to connect the frontplate to the base_
 * base/rotor
 * backplate (3d print)
 
-Make sure, that the ringlight cable is sitting in the guide slot. (yellow circle)
+Make sure the ringlight cable is sitting in the guide slot (yellow circle).
 Use the 4 M3x8 screws to mount the backplate (red arrows):
 
 ![image](https://user-images.githubusercontent.com/57842400/174092053-64635fb3-bd46-4a16-9aa4-e80b42860089.png)
@@ -273,12 +280,12 @@ Use the 4 M3x8 screws to mount the backplate (red arrows):
 The Polarizer module can be easily mounted by clicking it onto the rotor:
 ![image](https://user-images.githubusercontent.com/57842400/174101063-19a57087-fed6-4942-9bfe-185390ca3e7c.png)
 
-The polarizer module consists of two printed parts. It is very important that the smaller printed part (yellow circle) is not translucent in order to block all light. 
-There are two pieces of linear polarizer foil. The smaller piece (15x11mm) was inserted into the slot (red arrow). The larger piece (75x66mm) is covering the whole front area except for the middle (red arrow). It is absolutely crucial that those two pieces are oriented perpendicularly against each other. The polarizer will greatly improve the results by filtering allmost all direct reflections.
+The polarizer module consists of two printed parts. It is very important that the smaller printed part (yellow circle) is not translucent in order to block all light.
+There are two pieces of linear polarizer foil. The smaller piece (15x11mm) was inserted into the slot (red arrow). The larger piece (75x66mm) is covering the whole front area except for the middle (red arrow). It is absolutely crucial that those two pieces are oriented perpendicularly against each other. The polarizer will greatly improve the results by filtering almost all direct reflections.
 ![image](https://user-images.githubusercontent.com/57842400/174097472-3fcbf9ff-4506-4d25-a7c9-11e51c692b21.png)
 
 ### Starting the device for the first time
 
-Plug in a 12V (min. 2A power supply) and start the device. 
+Plug in a 12V (min. 2A power supply) and start the device.
 
 Continue with [this guide, which shows the initial setup of the firmware and some general tips & tricks](../firmware/usage.md)

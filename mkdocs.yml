@@ -54,7 +54,7 @@ nav:
   - Showcase:
     - Scanner: "showcase/scanner.md"
     - 3D Scans: "showcase/scan.md"
-  - Guideline:
-    - Bug&Feature: "guideline/report_bug.md"
+  - Guidelines:
+    - "Bugs & features": "guideline/report_bug.md"
   - Downloads: "downloads.md"
   - Changelog: "changelog.md"

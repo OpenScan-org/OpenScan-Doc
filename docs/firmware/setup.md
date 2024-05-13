@@ -14,6 +14,11 @@ I have pre-compiled a working Raspbian Image (2022-07-08), that can be downloade
 
 Download and flash the Raspbian Image to your Micro SD Card using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
+**!!!!DO NOT USE ANY OF THE ADVANCED SETTINGS OF THE RASPBERRY PI IMAGER AS THIS MIGHT CAUSE ISSUES WITH THE WIFI!!!!**
+
+______________________________________________________________________________
+# BELOW IS ONLY FOR VERY ADVANCED USERS AND USUALLY NOT NECESSARY WHEN USING THE PRE-COMPILED IMAGE FROM ABOVE!!!
+______________________________________________________________________________
 ## Manually installing and setting up your Raspberry Pi
 
 The firmware and following installation guide is optimized for **Raspbian Bullseye with Desktop** environment, but can also be used headless (Note, that the desktop version comes with some libraries that you will otherwise need to install manually).

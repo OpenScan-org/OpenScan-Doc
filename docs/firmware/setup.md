@@ -14,6 +14,8 @@ I have pre-compiled a working Raspbian Image (2022-07-08), that can be downloade
 
 Download and flash the Raspbian Image to your Micro SD Card using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
+The best way to further setup the device is done through Ethernet connection (LAN cable to your router) as described [in this section](../firmware/usage.md).
+
 **!!!!DO NOT USE ANY OF THE ADVANCED SETTINGS OF THE RASPBERRY PI IMAGER AS THIS MIGHT CAUSE ISSUES WITH THE WIFI!!!!**
 
 ______________________________________________________________________________

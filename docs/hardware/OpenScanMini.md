@@ -190,29 +190,10 @@ Guide the ringlight cable as indicated by the yellow circles:
 
 ![image](https://user-images.githubusercontent.com/57842400/174090027-2d1beaf6-c534-471c-bbe4-a1a458adef7a.png)
 
-#### Ringlight Variant: Arducam IMX519 16mp with the slide-in mount
-* 1× Ringlight PCB
-* 1× Arducam IMX519 16MP camera module
-* OpenScan slide-in mount
-* lid for the OpenScan slide-in mount
-* 4× M3×12 screws
 
-Start by sliding the camera module into the mount as pictured below until it snaps in place. **Take care that the small black camera cable slides cleanly into the recess (left side in the image).**
+**Check that the lens is centered so it doesn't touch the edge of the ringlight PCB. Otherwise it might get damaged during focussing!** 
 
-![01insert](https://user-images.githubusercontent.com/20565623/218055061-ce4bbe95-fad9-4d83-b638-9f8e1b1e828e.jpg)
-![02slide](https://user-images.githubusercontent.com/20565623/218055945-b0ad8791-660c-4991-a50c-367d68f87adb.jpg)
-
-Flip the mount and check that the lens sits as pictured:
-![03check](https://user-images.githubusercontent.com/20565623/218056417-6cee16e4-5469-4bf5-8693-55f925c419dd.jpg)
-
-Place two of the M3×12 screws as pictured:
-![04place-screws](https://user-images.githubusercontent.com/20565623/218056474-aa86811f-3cd9-401f-9c4b-9bda1f7894be.jpg)
-
-Slide the ringlight module onto the screws and press it into its recess in the mount:
-![05place-ringlight](https://user-images.githubusercontent.com/20565623/218089255-274204e4-2366-4914-86b8-897390c78af4.jpg)
-
-
-**Check that the lens is centered so it doesn't touch the edge of the ringlight PCB. Otherwise it might get damaged during focussing!** If necessary adjust its position in the rails.
+If necessary adjust its position.
 
 Insert the camera ribbon cable through the aperture in the mount:
 ![07place-mount](https://user-images.githubusercontent.com/20565623/218057916-94762255-4db1-463e-858e-12f32759b8ac.jpg)

@@ -50,6 +50,8 @@ TODO
 * 2x M2x6 standoffs
 * 2x M2 nuts
 
+**Remove the protective foam/plastic in front of the lens.**
+
 See the sequence of the parts: 
 
 ![image](https://user-images.githubusercontent.com/57842400/174085376-bd4337ea-9719-4759-b4ed-e29f14d615cb.png)

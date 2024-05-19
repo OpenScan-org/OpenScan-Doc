@@ -36,21 +36,22 @@ TODO
 
 ### Control module
 
-**IMPORTANT:**
+#### Installing camera
 
-**Skip this step until "prepare control module" if you intend to use external cameras only**
+Select one of the options depending on your camera:
 
-**Make sure to follow the right setup for your camera module (either Arducam IMX519 or PiCamera V1.3/V2)**
+<details>
+  <summary>Arducam IMX519 16mp with Autofocus</summary>
 
-#### Arducam IMX519 16mp with Autofocus
-
+**You'll need following parts:**
+  
 * 1x Ringlight PCB
 * 1x Arducam IMX519 16mp camera module 
 * 2x M2x6 screws
 * 2x M2x6 standoffs
 * 2x M2 nuts
 
-**Remove the protective foam/plastic in front of the lens.**
+**Remove the protective foam/plastic in front of the lens before assembling.**
 
 See the sequence of the parts: 
 
@@ -60,19 +61,34 @@ See the sequence of the parts:
 
 ![arducam](https://user-images.githubusercontent.com/57842400/174086556-5910f154-6780-4acd-94b1-73ce9ca5a6db.jpg)
 
-#### Pi Camera v2.1 or v1.3
+</details>
 
+<details>
+  <summary>Pi Camera v2.1 or v1.3</summary>
+  
+**You'll need following parts:**
+  
 * 1x Ringlight PCB
 * Pi Camera v2.1 or v1.3 module 
 * 2x M2x12 screws
 * 2x spacer
 * 2x M2 nuts
 
+**Remove the protective foam/plastic in front of the lens before assembling.**
+
 See the sequence of the parts: 
 
 ![image](https://user-images.githubusercontent.com/57842400/174087838-dd806e6d-5823-4748-9241-7bf04aed1ba9.png)
 
 ![picamera](https://user-images.githubusercontent.com/57842400/174087769-922aa8e4-7e88-4b05-b342-0912f542a6b9.jpg)
+</details>
+
+<details>
+  <summary>External camera (DSLR or phone)</summary>
+
+  **You don't need to do anything.**
+  
+</details>
 
 #### Prepare control module
 

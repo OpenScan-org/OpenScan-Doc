@@ -35,7 +35,7 @@ The OpenScan Mini is a compact desktop 3D scanner capable of scanning objects up
 
 ## 3D Printing
 
-Get the printable .stl (and design) files [here](https://github.com/OpenScanEu/OpenScan-Design/tree/main/OpenScanMini).
+Get the printable .stl (and design) files [here](https://github.com/OpenScan-org/OpenScan-Design/tree/main/STL/Mini/V1).
 
 **PRINTER**
 

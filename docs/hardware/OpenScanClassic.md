@@ -26,11 +26,22 @@ The OpenScan Classic is a compact desktop 3D scanner capable of scanning objects
 
 3d printed parts:
 
-TODO
+recommended parts (see link below):
+
+* 1x Adapter1
+* 1x Adapter2 - Gear Large
+* 1x Pi Shield RPi with ringlight and Network + USB
+* 1x Pi Shield Base
+* 1x Stand1 Nema17
+* 1x Stand2
+* 2x Rotary Arm
+* 1x Turntable Adapter large
+* 1x Turntable Adapter small
+* 1x Gear Small (two versions available for right tolerances)
+* 1x Turntable Base (choose version according to your printer size)
 
 ### 3D Printing
-Get the printable .stl (and design) files
-TODO
+Get the printable .stl (and design) files [here](https://github.com/OpenScan-org/OpenScan-Design/tree/main/STL/Classic/V1).
 
 ## Assembly
 

@@ -183,7 +183,12 @@ See the sequence of the parts:
 Mount the ringlight module using 4 M3x8mm bolts as indicated by the red arrows:
 ![image](https://user-images.githubusercontent.com/57842400/174088696-c2679271-221a-4d9e-8668-62ab5f7b548f.png)
 
-Connect the camera ribbon cable with the camera. The Metal plating is facing down (yellow circle).
+
+
+Connect the camera ribbon cable to the camera. The Metal plating is facing down (yellow circle).
+
+**when you have an orange ringlight cable make sure that the metal plating of the cable is facing up!!**
+
 Connect the 50cm ringlight cable with 3P JST connectors to the Ringlight (red arrow):
 
 ![image](https://user-images.githubusercontent.com/57842400/174090062-214e2906-c021-4d3a-a00e-800714ea3225.png)
@@ -196,26 +201,6 @@ Guide the ringlight cable as indicated by the yellow circles:
 **Check that the lens is centered so it doesn't touch the edge of the ringlight PCB. Otherwise it might get damaged during focussing!** 
 
 If necessary adjust its position.
-
-Insert the camera ribbon cable through the aperture in the mount:
-![07place-mount](https://user-images.githubusercontent.com/20565623/218057916-94762255-4db1-463e-858e-12f32759b8ac.jpg)
-
-Place the remaining two M3×12 screws and tighten them until the mount sits snugly on the rotor arm:
-![08tighten-screws](https://user-images.githubusercontent.com/20565623/218058112-4bc832c4-ead1-4787-a136-8da577ed9096.jpg)
-
-Look on the sides and check that there is no gap and the PCB is not visible anymore:
-![09check-tightness](https://user-images.githubusercontent.com/20565623/218058489-a66b0fe2-8580-487a-8ca6-c6901bc49cd9.jpg)
-
-
-Pull some length of cable upwards to give yourself some slack. Connect the cable to the camera module as pictured. The metal contacts need to face towards the camera's PCB:
-![10connect-cable](https://user-images.githubusercontent.com/20565623/218058513-75b959da-f2e7-40d3-af35-e84944c5d235.jpg)
-
-Pull the cable down again, so as little length of cable as possible remains inside, but make sure the cable is not under tension. Place the lid onto the mount and push it in:
-![11close-lid](https://user-images.githubusercontent.com/20565623/218058849-46ec453b-368b-41af-8369-e1afd7a21eec.jpg)
-
-Don't forget to connect the pink ringlight cable:
-![12connect-ringlight-cable](https://user-images.githubusercontent.com/20565623/218060092-e03d6a9c-150b-47f5-944f-3ffd0b9cb8b2.jpg)
-
 
 Guide the ringlight cable as indicated by the yellow circles:
 

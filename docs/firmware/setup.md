@@ -10,13 +10,13 @@ Alternatively you can set up the firmware manually by following [this guide](#ma
 
 ## Flashing the SD Card using the Raspberry Pi Imager
 
-I have pre-compiled a working Raspbian Image (2022-07-08), that can be downloaded from [Google Drive (1.5GB)](https://drive.google.com/file/d/1XXfUd6JgxX0Ry0_AVzdS8D8w36e8Bed7/view?usp=sharing) (working flawlessly on Raspberry Pi 3b+ and 4)
+I have pre-compiled a working Raspbian Image (2022-07-08), that can be downloaded from [Dropbox (1.6GB)](https://www.dropbox.com/scl/fi/7hotnizvdl5lpis829yyh/2024-09-09-OpenScan.zip?rlkey=yszh7xcn9bejl6epjz8mo1a6x&st=81gtpgjl&dl=1) (working flawlessly on Raspberry Pi 3b+ and 4)
 
 Download and flash the Raspbian Image to your Micro SD Card using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
-The best way to further setup the device is done through Ethernet connection (LAN cable to your router) as described [in this section](../firmware/usage.md).
+**!!!!Select CUSTOM IMAGE AND DO NOT USE ANY OF THE ADVANCED SETTINGS OF THE RASPBERRY PI IMAGER AS THIS MIGHT CAUSE ISSUES WITH THE WIFI!!!!**
 
-**!!!!DO NOT USE ANY OF THE ADVANCED SETTINGS OF THE RASPBERRY PI IMAGER AS THIS MIGHT CAUSE ISSUES WITH THE WIFI!!!!**
+The best way to further setup the device is done through Ethernet connection (LAN cable to your router) as described [in this section](../firmware/usage.md).
 
 ______________________________________________________________________________
 # BELOW IS ONLY FOR VERY ADVANCED USERS AND USUALLY NOT NECESSARY WHEN USING THE PRE-COMPILED IMAGE FROM ABOVE!!!

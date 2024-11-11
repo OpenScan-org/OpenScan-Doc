@@ -14,6 +14,19 @@ theme:
     - content.code.annotate
     - search.suggest
     - search.highlight
+
+extra_css:
+  - |
+    :root {
+      --md-typeset-a-color: #e91e63;
+    }
+    .md-typeset a {
+      color: var(--md-typeset-a-color);
+    }
+    .md-typeset a:hover {
+      color: #c2185b;
+    }
+    
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

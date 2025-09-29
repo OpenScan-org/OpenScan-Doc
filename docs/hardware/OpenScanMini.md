@@ -35,7 +35,7 @@ The OpenScan Mini is a compact desktop 3D scanner capable of scanning objects up
 
 ## 3D Printing
 
-Get the printable .stl (and design) files [here](https://github.com/OpenScan-org/OpenScan-Design/tree/main/STL/Mini/V1).
+Get the printable .stl (and design) files [here](https://github.com/OpenScan-org/OpenScan-Design/tree/main/files/Mini/V1).
 
 **PRINTER**
 
@@ -257,3 +257,4 @@ There are two pieces of linear polarizer foil. The smaller piece (15x11mm) was i
 Plug in a 12V (min. 2A power supply) and start the device.
 
 Continue with [this guide, which shows the initial setup of the firmware and some general tips & tricks](../firmware/usage.md)
+

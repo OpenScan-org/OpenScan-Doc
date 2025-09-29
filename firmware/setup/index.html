@@ -1,0 +1,1097 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../hardware/PCBs/">
+      
+      
+        <link rel="next" href="../usage/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Setup - OpenScan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../:root {
+  --md-typeset-a-color: #e91e63;
+}
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+}
+.md-typeset a:hover {
+  color: #c2185b;
+}
+">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#firmware-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenScan" class="md-header__button md-logo" aria-label="OpenScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenScan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenScan" class="md-nav__button md-logo" aria-label="OpenScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OpenScan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/OpenScanClassic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Classic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/OpenScanMini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mini
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/PCBs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firmware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firmware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-the-sd-card-using-the-raspberry-pi-imager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing the SD Card using the Raspberry Pi Imager
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Photogrammetry
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Photogrammetry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Showcase
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Showcase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/scanner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scanner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/scan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3D Scans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guidelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guideline/report_bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bugs & features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-the-sd-card-using-the-raspberry-pi-imager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing the SD Card using the Raspberry Pi Imager
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="firmware-setup">Firmware - Setup</h1>
+<h2 id="overview">Overview</h2>
+<p>It is necessary to use a <strong>Raspberry Pi with at least 1GB of RAM</strong> to run the firmware. So far, the firmware has been tested on Raspberry Pi 3B+ and 4B variants, but it might work on other versions.</p>
+<p>The easiest way is to download the latest Raspbian image and flash your micro SD card as described <a href="#flashing-the-sd-card-using-the-raspberry-pi-imager">here</a>.</p>
+<p>Alternatively you can set up the firmware manually by following <a href="#manually-installing-and-setting-up-your-raspberry-pi">this guide</a>.</p>
+<h2 id="flashing-the-sd-card-using-the-raspberry-pi-imager">Flashing the SD Card using the Raspberry Pi Imager</h2>
+<p>I have pre-compiled a working Raspbian Image (2022-07-08), that can be downloaded from <a href="https://www.dropbox.com/scl/fi/7hotnizvdl5lpis829yyh/2024-09-09-OpenScan.zip?rlkey=yszh7xcn9bejl6epjz8mo1a6x&amp;st=81gtpgjl&amp;dl=1">Dropbox (1.6GB)</a> (working flawlessly on Raspberry Pi 3b+ and 4)</p>
+<p>Download and flash the Raspbian Image to your Micro SD Card using the <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a></p>
+<p><strong>!!!!Select CUSTOM IMAGE AND DO NOT USE ANY OF THE ADVANCED SETTINGS OF THE RASPBERRY PI IMAGER AS THIS MIGHT CAUSE ISSUES WITH THE WIFI!!!!</strong></p>
+<p>The best way to further setup the device is done through Ethernet connection (LAN cable to your router) as described <a href="../usage/">in this section</a>.</p>
+<hr />
+<h1 id="below-is-only-for-very-advanced-users-and-usually-not-necessary-when-using-the-pre-compiled-image-from-above">BELOW IS ONLY FOR VERY ADVANCED USERS AND USUALLY NOT NECESSARY WHEN USING THE PRE-COMPILED IMAGE FROM ABOVE!!!</h1>
+<hr />
+<h2 id="manually-installing-and-setting-up-your-raspberry-pi">Manually installing and setting up your Raspberry Pi</h2>
+<p>The firmware and following installation guide is optimized for <strong>Raspbian Bullseye with Desktop</strong> environment, but can also be used headless (Note, that the desktop version comes with some libraries that you will otherwise need to install manually).</p>
+<h3 id="raspi-config">Raspi-config</h3>
+<p><code>sudo raspi-config</code></p>
+<p><code>--&gt; performance options --&gt; GPU --&gt; change to 256</code>
+Increase GPU memory, which helps processing the captured photos</p>
+<p><code>--&gt; localization settings --&gt; wlan country --&gt; your country</code>
+Change the WLAN settings, so that device works in your area</p>
+<p>Save and reboot now (or later ;)</p>
+<h3 id="folder-structure">Folder structure</h3>
+<p>Create directories</p>
+<p><code>mkdir /home/pi/OpenScan/ /home/pi/OpenScan/scans /home/pi/OpenScan/files /home/pi/OpenScan/settings /home/pi/OpenScan/tmp /home/pi/OpenScan/updates</code></p>
+<h3 id="wlan-settings">WLAN settings</h3>
+<p>Open the settings file</p>
+<p><code>sudo nano /etc/network/interfaces</code></p>
+<p>And add to the end:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>auto wlan0
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>iface wlan0 inet manual
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre></div>
+<h3 id="samba-optional-but-highly-recommended">Samba (optional but highly recommended)</h3>
+<p>Create a shared network drive, so that you can easily access the Raspberry Pi's filesystem. It enables you to upload custom datasets to the OpenScanCloud through the browser interface. Simply copy a zip file containing your photos to the <em>../OpenScan/scans</em> directory.</p>
+<p>Install the package</p>
+<p><code>sudo apt-get install samba samba-common-bin</code></p>
+<p>Open the configuration file</p>
+<p><code>sudo nano /etc/samba/smb.conf</code></p>
+<p>And change the following lines:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>read only = no
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>create mask = 0775
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>directory mask = 0775
+</code></pre></div>
+<p>Add the following line, if you are using Windows:</p>
+<p><code>wins support = yes</code></p>
+<p>And add to the end of the file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[PiShare]
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>comment=Raspberry Pi Share
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>path=/home/pi/
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>browseable=Yes
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>writeable=Yes
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>only guest=no
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>create mask=0777
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>directory mask=0777
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>public=yes
+</code></pre></div>
+<p>Set a password for user pi (by default I use password <em>raspberry</em>)</p>
+<p><code>sudo smbpasswd -a pi</code></p>
+<p>And add rights:</p>
+<p><code>sudo chmod -R 777 /home/pi/OpenScan</code></p>
+<h3 id="gphoto">Gphoto</h3>
+<p>Necessary to controll DSLR cameras connected by USB cable.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo apt install libgphoto2-dev gphoto2
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo pip3 install -v gphoto2
+</code></pre></div>
+<h3 id="nodered">NodeRed</h3>
+<p>Download and install:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash &lt;(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+</code></pre></div>
+<p>--&gt; confirm with yes and yes :)</p>
+<p>Open node-red daemon file:</p>
+<p><code>sudo nano /lib/systemd/system/nodered.service</code></p>
+<p>add to the section [Unit]</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Wants=network.target flask.service
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>After=flask.service
+</code></pre></div>
+<p>and change the following lines under [Service] to run nodered as root:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>User = root
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>#Group = pi
+</code></pre></div>
+<p>Initialize node-red:</p>
+<p><code>sudo node-red admin init</code></p>
+<ul>
+<li>settings file: <code>/root/.node-red/settings.js</code></li>
+<li>Security: <code>No</code></li>
+<li>Project: <code>No</code></li>
+<li>Flows File Settings: <code>Enter</code></li>
+<li>Passphrase: <code>Enter</code></li>
+<li>Theme: <code>default</code></li>
+<li>Text editor: <code>default</code></li>
+<li>External Modules: <code>Yes</code></li>
+</ul>
+<p>Open node-red settings file:</p>
+<p><code>sudo nano /root/.node-red/settings.js</code></p>
+<p>And find, uncomment and change the following parameters:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>userDir: &#39;/home/pi/OpenScan/settings/.node-red/&#39;,
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>uiPort: process.env.PORT || 80,
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>httpAdminRoot: &#39;/editor&#39;,
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>httpStatic: &#39;/home/pi/OpenScan/&#39;,
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>ui: { path: &quot;&quot; },
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>functionGlobalContext: { // enables and pre-populates the context.global variable
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    os:require(&#39;os&#39;),
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    path:require(&#39;path&#39;),
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    fs:require(&#39;fs&#39;)
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    },
+</code></pre></div>
+<p>Enable nodered daemon and restart the device:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo systemctl enable nodered.service
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo reboot -h
+</code></pre></div>
+<p>Open the node-red settings directory:</p>
+<p><code>cd /home/pi/OpenScan/settings/.node-red/</code></p>
+<p>And run the following command to install some additional palettes to node-red</p>
+<p><code>sudo npm i node-red-dashboard &amp;&amp; sudo npm i node-red-contrib-python3-function &amp;&amp; sudo npm i node-red-node-ui-table</code></p>
+<p><code>node-red-restart</code></p>
+<h3 id="libcamera-to-run-arducam-imx519-and-other-non-raspberry-pi-camera-moduls">Libcamera - to run Arducam IMX519 (and other non-Raspberry-Pi camera moduls)</h3>
+<p>See <a href="https://www.arducam.com/docs/cameras-for-raspberry-pi/raspberry-pi-libcamera-guide/#how-to-install-libcamera-d9f38d46-8576-43e2-9375-e225c272095f">Arducam.com</a> for more details</p>
+<p>Download all necessary files</p>
+<p><code>wget -O install_pivariety_pkgs.sh https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh &amp;&amp; chmod +x install_pivariety_pkgs.sh</code></p>
+<p><code>sudo apt update</code></p>
+<p><code>./install_pivariety_pkgs.sh -p libcamera_dev</code></p>
+<p><code>./install_pivariety_pkgs.sh -p libcamera_apps</code></p>
+<p><code>./install_pivariety_pkgs.sh -p imx519_kernel_driver</code></p>
+<h3 id="download-openscan-firmware">Download OpenScan Firmware</h3>
+<p>Custom node red flows (browser interface):</p>
+<p><code>sudo wget https://raw.githubusercontent.com/OpenScanEu/OpenScan2/main/update/main/flows.json -O /home/pi/OpenScan/settings/.node-red/flows.json</code></p>
+<p>Some Python functions used by the firmware:</p>
+<p><code>sudo wget https://raw.githubusercontent.com/OpenScanEu/OpenScan2/main/update/main/OpenScan.py -O /usr/lib/python3/dist-packages/OpenScan.py</code></p>
+<p>A local server providing several functions (flask):</p>
+<p><code>sudo wget https://raw.githubusercontent.com/OpenScanEu/OpenScan2/main/update/main/fla.py -O /home/pi/OpenScan/files/fla.py</code></p>
+<p>Custom config.txt file, which is needed to use different camera moduls (especially IMX519):</p>
+<p><code>sudo wget https://raw.githubusercontent.com/OpenScanEu/OpenScan2/main/update/main/config.txt -O /boot/config.txt</code></p>
+<p>Arducam's camera focus script for the IMX519 sensor:</p>
+<p><code>sudo wget https://raw.githubusercontent.com/OpenScanEu/OpenScan2/main/update/main/Arducam.py -O /usr/lib/python3/dist-packages/Arducam.py</code></p>
+<p>And the OpenScan Logo to have a nice background:</p>
+<p><code>sudo wget https://raw.githubusercontent.com/OpenScanEu/OpenScan2/main/update/files/logo.jpg -O /home/pi/OpenScan/files/logo.jpg</code></p>
+<h3 id="enable-flask-local-server">Enable Flask local server:</h3>
+<p>create and open the service file:
+<code>sudo nano /lib/systemd/system/flask.service</code></p>
+<p>with the following content:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[Unit]
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Description=photo service
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>After=multi-user.target
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>[Service]
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>#ExecStartPre=/bin/sleep 5
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>ExecStart=/usr/bin/python3 /home/pi/OpenScan/files/fla.py
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>StandardOutput=inherit
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>StandardError=inherit
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>Restart=always
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>RestartSec=5
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>User=root
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>[Install]
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>WantedBy=multi-user.target
+</code></pre></div>
+<p>Enable and start the service:</p>
+<p><code>sudo systemctl daemon-reload &amp;&amp; sudo systemctl enable flask.service &amp;&amp; sudo systemctl start flask.service</code></p>
+<h3 id="others">others</h3>
+<p>add to /boot/config.txt to disable display which causes some issues --&gt; WHY???</p>
+<p><code>hdmi_blanking=2</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

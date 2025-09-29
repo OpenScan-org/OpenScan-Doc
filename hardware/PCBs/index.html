@@ -1,0 +1,1352 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../OpenScanMini/">
+      
+      
+        <link rel="next" href="../../firmware/setup/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>PCB - OpenScan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../:root {
+  --md-typeset-a-color: #e91e63;
+}
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+}
+.md-typeset a:hover {
+  color: #c2185b;
+}
+">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pcbs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenScan" class="md-header__button md-logo" aria-label="OpenScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenScan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PCB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenScan" class="md-nav__button md-logo" aria-label="OpenScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OpenScan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenScanClassic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Classic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenScanMini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mini
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PCB
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCB
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pi-shield" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pi Shield
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pi Shield">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important remarks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dcdc-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCDC converter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-the-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control the Voltage!!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacitors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capacitors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optocoupler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optocoupler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringlight-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ringlight v1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ringlight v1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bom_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-remarks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important remarks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED orientation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firmware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firmware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firmware/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../firmware/usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Photogrammetry
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Photogrammetry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Showcase
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Showcase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/scanner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scanner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/scan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3D Scans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guidelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guideline/report_bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bugs & features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pi-shield" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pi Shield
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pi Shield">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important remarks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dcdc-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCDC converter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-the-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control the Voltage!!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacitors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capacitors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optocoupler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optocoupler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringlight-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ringlight v1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ringlight v1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bom_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      BOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-remarks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important remarks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important remarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED orientation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldering_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pcbs">PCBs</h1>
+<h2 id="pi-shield">Pi Shield</h2>
+<p>The OpenScan Pi Shield can be used to control two independent stepper motors and a variety of different cameras (Pi Camera, various Arducams, DSLR - via GPhoto and external Cameras like Smartphone and others). The mechanism can be used in various forms (see for example OpenScan Mini + Classic) and it could be easily adapted to be used as a camera slider or in other mechanisms.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233777-a679768e-08b9-406b-9027-11ad7a09ff09.png" /></p>
+<h3 id="bom">BOM</h3>
+<table>
+<thead>
+<tr>
+<th>Nr.</th>
+<th>Picture</th>
+<th>Count</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181232345-e3ba03e4-4131-4e7d-a505-69cd9948e4a7.png" /></td>
+<td>1x</td>
+<td>Raspberry Pi Shield</td>
+</tr>
+<tr>
+<td>2</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233128-fb792cf0-689e-410b-ade6-6d495498db20.png" /></td>
+<td>4x</td>
+<td>Pin Header female, 8p, 2.54</td>
+</tr>
+<tr>
+<td>3</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233187-0d979498-513d-489e-abc1-bcbca4f6503f.png" /></td>
+<td>1x</td>
+<td>Pin Header female, 2p, 2.54</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233214-6d651a9e-7e07-42bb-96c7-d7927dcab969.png" /></td>
+<td>1x</td>
+<td>Pin Header male, 3p, 2.54</td>
+</tr>
+<tr>
+<td>5</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233236-95104096-3b04-4816-b43b-6a8693a4179e.png" /></td>
+<td>2x</td>
+<td>Pin Header male, 4p, 2.54</td>
+</tr>
+<tr>
+<td>6</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233254-b91bea8a-7f77-4b05-9eaf-b0461dfcd1d3.png" /></td>
+<td>1x</td>
+<td>Pin Header female, 2x20p, 2.54</td>
+</tr>
+<tr>
+<td>7</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233282-917e3a05-3125-48aa-8c89-b857469948f9.png" /></td>
+<td>1x</td>
+<td>JST-XH-3P 90°</td>
+</tr>
+<tr>
+<td>8</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233293-5cc34136-8dae-4fa0-8371-d85864689ab2.png" /></td>
+<td>1x</td>
+<td>DCDC converter, 12V-&gt;5V, &gt;2.5A</td>
+</tr>
+<tr>
+<td>9</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233315-7ebac355-ca41-4194-993f-59567603bee0.png" /></td>
+<td>2x</td>
+<td>IRLZ34N</td>
+</tr>
+<tr>
+<td>10</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233339-20873acf-0240-4a1b-a6f5-bf5d60941132.png" /></td>
+<td>1x</td>
+<td>Barrel Connector, 5.5-2.1mm</td>
+</tr>
+<tr>
+<td>11</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233366-bef85c9e-26a4-49f9-8d56-a5915ab4ba9d.png" /></td>
+<td>1x</td>
+<td>Switch</td>
+</tr>
+<tr>
+<td>12</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233464-29f688ae-6a19-42ce-befa-e92e502883fc.png" /></td>
+<td>2x</td>
+<td>Capacitor 100uF, 16V</td>
+</tr>
+<tr>
+<td>13</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233504-3fc4ae5e-32b6-4750-aa88-77acf6d37c32.png" /></td>
+<td>1x</td>
+<td>Resistor 220 Ohm</td>
+</tr>
+<tr>
+<td>14</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233530-1df6dcf2-ea36-4b3c-ac07-ba3ddc086bc4.png" /></td>
+<td>1x</td>
+<td>Optocoupler PC817</td>
+</tr>
+</tbody>
+</table>
+<h3 id="important-remarks">Important remarks</h3>
+<h4 id="dcdc-converter">DCDC converter</h4>
+<p><strong>FOLLOW THIS STEP CAREFULLY AS ANY ERROR CAN DESTROY THE RASPBERRY PI</strong></p>
+<p><strong>The voltage regulator IS NOT set to 5V by default, which you will have to do as shown here:</strong></p>
+<ul>
+<li>solder the pin header (4) to the pi shield pcb</li>
+<li>check the back of the voltage regulator (8). The 5V solder pads (A) must be bridged. The connection at point (B) must be disconnected by scratching. This should set the converter to 5V</li>
+<li>Alternatively you can adjust the potentiometer on the front to set the correct output voltage of 5V.</li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181231953-b7b89bba-bd65-4ae1-abc2-d71b3b937a57.png" /></p>
+<ul>
+<li>When soldering the voltage regulator to the pin headers, make sure to have the right orientation and leave the uppermost hole free</li>
+</ul>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181232069-adf541a2-9c41-4a13-8842-338f52982cb4.png" /></p>
+<h4 id="control-the-voltage">Control the Voltage!!</h4>
+<p><strong>Before connecting any motors or the Raspberry Pi, you need to check if the voltage regulator is set to the right output of 5V. This can be done by connecting the PCB to 12V power supply through the barrel connector, switching (11.) to the lower position and checking the voltage between point (C) and (D), which must be 5.1V (±0.1V). If this is not the case, you have to use the potentiometer on the voltage regulator (8.) to change the output voltage accordingly.</strong></p>
+<h4 id="capacitors">Capacitors</h4>
+<p>(12) make sure to orient the capacitors in the right way due to their polarity. The negative side is labeled both on the PCB and on the capacitor itself.</p>
+<h4 id="optocoupler">Optocoupler</h4>
+<p>(14) Make sure to orient the optocoupler correctly. There is a small dot in one of the corners, which should face the resistor. see the following closeup:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181231774-282af073-89bf-41d4-b494-9732231c90f0.png" /></p>
+<h3 id="soldering">Soldering</h3>
+<p><strong>PLEASE MAKE SURE TO CHECK OUT THE IMPORTANT REMARKS EARLIER</strong></p>
+<p>Back:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181250607-cf94d9c8-04c8-41f1-ab25-912ff00ef82e.png" /></p>
+<p>Front:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181232248-42a45376-cdb9-4d61-a03c-289fd0c9a3ce.png" /></p>
+<h2 id="ringlight-v1">Ringlight v1</h2>
+<h3 id="bom_1">BOM</h3>
+<table>
+<thead>
+<tr>
+<th>Nr.</th>
+<th>Picture</th>
+<th>Count</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181234096-d83531fe-71d2-42a0-9b0c-7e51dad079fd.png" /></td>
+<td>1x</td>
+<td>Raspberry Pi Ringlight PCB</td>
+</tr>
+<tr>
+<td>2</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181234123-69b1bc75-5c62-41eb-bad8-f0a22a96a46b.png" /></td>
+<td>8x</td>
+<td>LED 1W</td>
+</tr>
+<tr>
+<td>3</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181234149-8eddef58-8755-4e11-9798-4029cf8fde60.png" /></td>
+<td>2x</td>
+<td>Resistor 1Ohm</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img alt="image" src="https://user-images.githubusercontent.com/57842400/181233282-917e3a05-3125-48aa-8c89-b857469948f9.png" /></td>
+<td>1x</td>
+<td>JST-XH-3P 90°</td>
+</tr>
+</tbody>
+</table>
+<h3 id="important-remarks_1">Important remarks</h3>
+<h4 id="led-orientation">LED orientation</h4>
+<p>Make sure that all LEDs are aligned correctly as shown in the following close-up. The hole on one side of the LED has to be facing the printed circle on the PCB.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181234449-2c3de7ec-2c2b-4201-8a84-0819bd179ffb.png" /></p>
+<h3 id="soldering_1">Soldering</h3>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181234329-ba1774f6-7169-4c99-a9ac-20b6e8927c0f.png" /></p>
+<p>You can test the circuit's functionality by applying 12V directly to the Ringlight PCB as shown in the following images:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/181256232-6a5cbe1f-4d3c-4e08-982f-6841a3be668f.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

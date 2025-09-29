@@ -1,0 +1,1504 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../setup/">
+      
+      
+        <link rel="next" href="../../photogrammetry/basics/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Usage - OpenScan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../:root {
+  --md-typeset-a-color: #e91e63;
+}
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+}
+.md-typeset a:hover {
+  color: #c2185b;
+}
+">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-use-the-openscan-firmware" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenScan" class="md-header__button md-logo" aria-label="OpenScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenScan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Usage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenScan" class="md-nav__button md-logo" aria-label="OpenScan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OpenScan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/OpenScanClassic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Classic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/OpenScanMini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mini
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/PCBs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firmware
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firmware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TLDR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-the-device-for-the-first-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the device for the first time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting to the device for the first time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      By ethernet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      By Wi-Fi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the user-interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-camera-and-scanner-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select camera and scanner model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings Menu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings Menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samba
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openscancloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenScanCloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network - Hostname
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      SCAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-good-scanning-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      HOW TO GET GOOD SCANNING RESULTS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-starting-position-for-the-rotor" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the starting position for the rotor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-motor-moves-to-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      The motor moves to fast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-images-are-out-of-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      The images are out of focus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-scanner-does-not-cover-the-whole-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      The scanner does not cover the whole object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-pressing-up-the-rotor-is-moving-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      when pressing up, the rotor is moving down
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-do-not-want-the-fancy-scan-routine-and-instead-use-the-turntable-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      I do not want the fancy scan routine and instead use the turntable only
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      FILES &amp; CLOUD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      UPDATE &amp; INFO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UPDATE &amp; INFO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend (node-red)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Photogrammetry
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Photogrammetry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photogrammetry/quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Showcase
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Showcase
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/scanner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scanner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../showcase/scan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3D Scans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guidelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guideline/report_bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bugs & features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Downloads
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TLDR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-the-device-for-the-first-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the device for the first time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting to the device for the first time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      By ethernet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      By Wi-Fi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the user-interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-camera-and-scanner-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select camera and scanner model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings Menu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings Menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samba
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openscancloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenScanCloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network - Hostname
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      SCAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-good-scanning-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      HOW TO GET GOOD SCANNING RESULTS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-starting-position-for-the-rotor" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the starting position for the rotor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-motor-moves-to-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      The motor moves to fast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-images-are-out-of-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      The images are out of focus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-scanner-does-not-cover-the-whole-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      The scanner does not cover the whole object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-pressing-up-the-rotor-is-moving-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      when pressing up, the rotor is moving down
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-do-not-want-the-fancy-scan-routine-and-instead-use-the-turntable-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      I do not want the fancy scan routine and instead use the turntable only
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      FILES &amp; CLOUD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      UPDATE &amp; INFO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UPDATE &amp; INFO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-node-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend (node-red)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-to-use-the-openscan-firmware">How to use the OpenScan Firmware</h1>
+<h2 id="tldr">TLDR</h2>
+<ul>
+<li>Add your Wi-Fi credentials to wpa_supplicant.conf in the /boot/ directory of the SD card <strong>OR</strong> connect the device to your router with an Ethernet cable</li>
+<li>connect the device to a 12V power source and start booting</li>
+<li>after 1-2 mins, access <strong><a href="http://openscan/">http://openscan/</a></strong> or sometimes <strong><a href="http://openscan.local/">http://openscan.local/</a></strong> on a device connected to the same network.  Alternatively, you can connect to http:// + <strong>IP</strong> using the IP of the scanner.</li>
+<li>enter the model and camera type</li>
+<li>optional: open settings menu and request &amp; insert the OpenScanCloud token</li>
+<li>open <strong>Scan</strong> menu, turn on the ringlight, adjust the brightness, crop unneeded background and make a first dataset of 50-100 photos</li>
+<li>download the photos to your PC in the <strong>Files&amp;Cloud</strong> menu (alternatively, upload the dataset to OpenScanCloud for processing)</li>
+</ul>
+<h2 id="connecting-to-the-device-for-the-first-time">Connecting to the device for the first time</h2>
+<h3 id="by-ethernet">By ethernet</h3>
+<p>It is highly recommended to use an Ethernet cable for the first start and add Wi-Fi credentials in settings menu later (see ...).</p>
+<p>To do so, connect the Raspberry Pi to your router using an Ethernet cable. Skip the next step.</p>
+<h3 id="by-wi-fi">By Wi-Fi</h3>
+<p>Insert the Micro-SD card into your computer and open the <strong>boot</strong>-directory. Find and open the file <strong>wpa_supplicant.conf</strong>
+<img alt="image" src="https://user-images.githubusercontent.com/57842400/165316356-04fd9f0d-7526-4ac7-a9b0-6879b29f7310.png" /></p>
+<p>Change the country code according to your location (see <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">Wikipedia - ISO3166-1 alpha-2 country codes</a>) and change your Network name (SSID) and Wi-Fi-Password (psk):</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165317238-07f2b4b3-e786-4285-8d69-65e918a44793.png" /></p>
+<p>Double-check your SSID and PSK!
+Seriously! ;)</p>
+<p>Save the file and unmount the Micro-SD card from your computer.</p>
+<h3 id="accessing-the-user-interface">Accessing the user-interface</h3>
+<p>Insert the Micro-SD card into the Raspberry Pi and power up the device. The first boot will take 2-3 minutes. The LED ring light will blink several times after successfully starting the scanner.</p>
+<p>You will be able to access the scanner's interface from any device in the same network. Open any browser and follow this link: <strong><a href="http://openscan/">http://openscan/</a></strong>, which will open the following start screen:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165322638-bb3b2524-70f1-4a66-9d7f-aeb60535760f.png" /></p>
+<p>Note: It is highly recommended (but not necessary) to allow internet access in order to get the latest updates and/or use the free OpenScanCloud processing pipeline. Alternatively, you can deactivate internet access in your router's settings and use the scanner locally.</p>
+<p>The scanner will automatically check if new updates are available. Before continuing, make sure to <strong>install updates</strong> by clicking the button. The device will reboot.</p>
+<h3 id="select-camera-and-scanner-model">Select camera and scanner model</h3>
+<p>Select the scanner's model from the dropdown menu:</p>
+<ul>
+<li>
+<p><a href="https://en.openscan.eu/openscan-classic">OpenScan Classic</a></p>
+</li>
+<li>
+<p><a href="https://en.openscan.eu/openscan-mini">OpenScan Mini</a></p>
+</li>
+</ul>
+<p>Select the camera from the dropdown menu:</p>
+<ul>
+<li>
+<p>Pi Camera v1, v2, HQ, Arducam IMX519, IMX290, IMX378, OV9281 are connected through the ribbon cable. If you encounter any issues, please check the cable's orientation!</p>
+</li>
+<li>
+<p>DSLR (gphoto) - can be used with a wide range of cameras, which can be connected and controlled via USB. Check <a href="http://www.gphoto.org/proj/libgphoto2/support.php">GPhoto</a> if your camera is supported.</p>
+</li>
+<li>
+<p>External Camera - Can be used to connect your camera trigger to the GPIO pins on the front of the Pi shield. This can be used with any (modified) remote shutter release, and thus it is possible to use Smartphones, DSLR and compact cameras</p>
+</li>
+</ul>
+<p>After selecting camera and model, you should restart the device one final time ;)</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165325652-c8b6da72-5322-4a2b-a5d2-dcd8beaac39e.png" /></p>
+<p>Now, the shown start screen will appear in its full glory showing all available sub-menus. You can navigate the menu by expanding the navigation bar on the top left:</p>
+<p>You are ready to start scanning :)</p>
+<p>But before you do so, please open the settings menu in order to customize the device to your needs and use its full potential!</p>
+<h2 id="settings-menu">Settings Menu</h2>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165332037-27323913-a45e-40cc-9d10-f277fd25489c.png" /></p>
+<p>Note that there are small <strong>Info</strong> buttons in every column, which will open a pop-up window with additional information</p>
+<h3 id="ssh">SSH</h3>
+<p><strong>If you do not intend to access the device by terminal, please deactivate SSH.</strong>
+If you want to use SSH, please use the following credentials to login and change the password immediately! (default user: pi, password: raspberry)</p>
+<h3 id="samba">Samba</h3>
+<p>Samba is a local filesharing server, which allows accessing the files on the device directly from your computer. This can be used to manage the image sets in your file browser. Additionally, you can upload zip files containing image sets from your computer to the Raspberry Pi in order to use the OpenScanCloud processing pipeline. <strong>If you do not intend to use this feature, please deactivate Samba.</strong></p>
+<p>Please change the default password by running the following command (default user: pi, password: raspberry):</p>
+<p><code>sudo smbpasswd -a pi</code></p>
+<p>Copy the following address to your file browser in order to access the local files: <code>\\openscan\PiShare\OpenScan\scans</code></p>
+<h3 id="openscancloud">OpenScanCloud</h3>
+<p>In order to use the free/donation-based OpenScanCloud, you first have to read &amp; agree to the Terms of use. The only requirement is an individual token, which is a 32-digit individual key, which you can easily get through the user interface. In order to get such a token you need to hit <strong>register</strong> and enter your e-mail address, first and family name. The token will be sent to the given mail within one or two days. Please check your spam folder!</p>
+<p>As soon as you enter a token, it will be verified and you can see your individual "limits"</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165333684-83cccd65-15a2-4e87-85e0-a314714d97d8.png" /></p>
+<p>Each token comes with a given amount of 'credit' which is another measure against spam. The given number in Gigabyte indicates the amount of data, that you can process on the servers. IMPORTANT: The credit can be increased at any time by sending a mail to cloud@openscan.eu</p>
+<h3 id="network-hostname">Network - Hostname</h3>
+<p>If you use multiple OpenScan devices in the same network, it is quite useful to give every scanner its individual name ;)</p>
+<h3 id="advanced-settings">Advanced settings</h3>
+<p>There are a ton of additional settings, which you can modify. Note, that for the OpenScan Classic &amp; Mini, you do not need to touch any of those settings.</p>
+<h2 id="scan">SCAN</h2>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165336866-0aac79ff-6b4f-41d8-87fd-ed793c3f9f02.png" /></p>
+<p>Finally! Time to start scanning :)</p>
+<ul>
+<li>set the projectname</li>
+<li>Place the <strong>prepared</strong> object on the turntable (<strong>please follow <em>how to get good scanning results</em>, to properly prepare your object  and setup and avoid disappointing results :)</strong>)</li>
+<li>Turn on the ring light</li>
+<li>when using the OpenScan Classic: move the camera close to the object</li>
+<li>adjust the shutter speed, so that there are no over- or underexposed areas</li>
+<li>crop the image, so that the amount of visible background is minimal</li>
+<li>70 - 100 photos are more than enough for almost all objects. If the result is bad, 200 photos won't improve it significantly ;)</li>
+<li>Start the routine</li>
+<li>Pause, unpause or stop the routine if you need to</li>
+<li>After the scan is done, you can choose, whether you want to do a second pass, with a different object orientation or finish the scan. Once finished, the image set can be accessed in the <strong>Files&amp;Cloud</strong> menu.</li>
+</ul>
+<h2 id="how-to-get-good-scanning-results">HOW TO GET GOOD SCANNING RESULTS</h2>
+<p>Whether a scanning result will be good or bad is fully determined before even starting the scan. Especially metal and plastic parts will need some kind of preparation (i.e. chalk or scanning spray). Please read the <a href="../photogrammetry/basics/">basic guide to photogrammetry</a>.</p>
+<p><img alt="DecisionTree" src="https://user-images.githubusercontent.com/57842400/165338465-a8296dba-f05b-4db1-908f-e1f7d921e373.png" /></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="what-is-the-starting-position-for-the-rotor">What is the starting position for the rotor</h3>
+<p>Please understand the coordinate system used here. The following image shows the 0°-position</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165343581-94caf3bb-97cd-4892-a441-9cd95ee834e7.png" /></p>
+<p>and you can set the starting position of the rotor in the settings menu/motor tab (advanced settings)</p>
+<h3 id="the-motor-moves-to-fast">The motor moves to fast</h3>
+<ul>
+<li>lower the acceleration in the settings menu/motor tab (advanced settings)</li>
+<li>increase the motor delay (advanced settings)</li>
+</ul>
+<h3 id="the-images-are-out-of-focus">The images are out of focus</h3>
+<ul>
+<li>in case of Arducam: use manual focus mode</li>
+<li>in case of Pi Camera: re-focus the camera using the focus adjustment tool</li>
+</ul>
+<h3 id="the-scanner-does-not-cover-the-whole-object">The scanner does not cover the whole object</h3>
+<ul>
+<li>change the min/max angle in the motor rotor settings (advanced settings)</li>
+</ul>
+<h3 id="when-pressing-up-the-rotor-is-moving-down">when pressing up, the rotor is moving down</h3>
+<ul>
+<li>invert the motor by either flipping the motor cable's connector 180° (after powering off the device!!) or change the motor's direction in the motor settings menu (advanced settings)</li>
+</ul>
+<h3 id="i-do-not-want-the-fancy-scan-routine-and-instead-use-the-turntable-only">I do not want the fancy scan routine and instead use the turntable only</h3>
+<ul>
+<li>activate the turntable mode in the motor settings (advanced settings), which will deactivate the rotor</li>
+</ul>
+<h2 id="files-cloud">FILES &amp; CLOUD</h2>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165345009-1bf5bb61-5df6-4521-8723-8d120ad18df0.png" /></p>
+<h2 id="update-info">UPDATE &amp; INFO</h2>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165345299-9269ae69-4bdd-43bd-a57d-b1624d37c534.png" /></p>
+<h3 id="backend-node-red">Backend (node-red)</h3>
+<p>You can access the backend/programming interface Node-red through the following link <a href="http://openscan/editor">http://openscan/editor</a></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/57842400/165345589-58a6f50c-ee0b-4812-b96f-74448c83f21e.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

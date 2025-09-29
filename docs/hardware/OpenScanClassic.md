@@ -41,7 +41,7 @@ recommended parts (see link below):
 * 1x Turntable Base (choose version according to your printer size)
 
 ### 3D Printing
-Get the printable .stl (and design) files [here](https://github.com/OpenScan-org/OpenScan-Design/tree/main/STL/Classic/V1).
+Get the printable .stl (and design) files [here](https://github.com/OpenScan-org/OpenScan-Design/tree/main/files/Classic/V1).
 
 ## Assembly
 
@@ -274,3 +274,4 @@ Connect the modified remote shutter release control to the two pins exposed to t
 ## Operation
 
 TODO
+
